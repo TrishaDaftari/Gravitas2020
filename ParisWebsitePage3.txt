@@ -1,0 +1,107 @@
+<html>
+<head>
+<title> Contact us Page
+</title>
+</head>
+<body bgcolor="purple" text="yellow">
+<h2> The other tourist attractions of Paris include <ul> <li> <font color="green"> Basilica de Sacre-Coeur, </font> </li> 
+<li><font color="red"> Musee D'Orsay,</font> </li>
+<li> <font color="blue"> Tuilieries Garden, </font> </li> 
+<li> <font color="white"> Le Palace de concorde, </font> </li> 
+<li> <font color="pink"> Centre Pompidou</font> ; and </li>
+<li> <font color="red"> Disneyland </li>
+<br>
+<br>
+<h2> <font color="blue"> Location:
+<Br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167998.10803373056!2d2.206977064368058!3d48.858774103123785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sin!4v1601723099555!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> </font> </h2>
+</font> </h2> <img align="left" src="MuseeD'Orsay.jpg" width="575' height="383">
+<br> 
+<img align="right" src="DisneyLandParis.jpg" width="600" height="336">
+<br>
+<br>
+<h2> <font color="white"> For any further queries contact us on-
+<br> email Id: tourismparis@gmail.com
+<br> Mobile Number: XXXXXX5555
+<br> Instagram Id: @TourismParisOfficial
+<br> Twitter Id: Tourism_Paris
+<br> Facebook Profile: Paris.Tourism
+<br.
+<br>
+<br>
+<br>
+<br>
+<font color="red"> You can also inform us about your query by filling the form given below" </font>
+</h2>
+<form id="CustomerInformation" action="/action_page.php" onsubmit="return validateForm()" method="post">
+<table >
+<tr>
+<td align="right">
+FullName:
+</td>
+<td>
+<input type="text" name="FullName" required>
+<input type="submit" value="Submit">
+</td>
+</tr>
+<tr>
+<td align="right">
+Email:
+</td>
+<td>
+<input type="text" Email="Email address" required>
+<input type="submit" value="Submit">
+</td>
+</tr>
+<tr>
+<td align="right">
+Message:
+</td>
+<td> 
+<input type="text" Message="query" required>
+<input type="submit" value="Submit">
+</td>
+</tr>
+</table>
+</form>
+<button id="btn1">
+     Submit
+</button>
+
+<script>
+
+function validateform(){  
+
+var FullName=document.CustomerInformation.name.value;  
+
+var Email=document.CustomerInformation.email.value;  
+
+var Message=document.CustomerInformation.message.value;
+  
+
+if (FullNameame==null || FullName==""){  
+
+  alert("Name can't be blank");  
+
+  return false;  
+
+}
+else if(Email==null || Email=="" ){  
+
+  alert("Email must contain @ symbol and domain name Example: xyz@gmail.com");  
+
+  return false;  
+
+  }  
+
+}
+</script>
+<script>
+  var btn = document.getElementById("btn1");
+  btn.onclick = function (showAlert){
+alert("You have sucessfully submitted your query. We will get back to you soon");
+  }
+</Script>
+<h1> <Font Color= "RED"> THANK YOU FOR VISITING! </font> </h1.
+</body>
+</html>
+
