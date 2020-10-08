@@ -32,15 +32,15 @@
 <br>
 <font color="red"> You can also inform us about your query by filling the form given below" </font>
 </h2>
-<form id="CustomerInformation" action="/action_page.php" onsubmit="return validateForm()" method="post">
+<form id="CustomerInformation" action="#" method="post">     <!--The action section had an unnecessary .php link (no .php page present. Though this was not affecting the functioning of the page-->
 <table >
 <tr>
 <td align="right">
 FullName:
 </td>
 <td>
-<input type="text" name="FullName" required>
-<input type="submit" value="Submit">
+<input type="text" name="FullName" class="name">
+<input type="submit" value="Submit" onclick="validateform()">       <!--onclick attribute was missing, so the script wasn't able to know when to start executing the function-->
 </td>
 </tr>
 <tr>
@@ -48,8 +48,8 @@ FullName:
 Email:
 </td>
 <td>
-<input type="text" Email="Email address" required>
-<input type="submit" value="Submit">
+<input type="email" Email="Email address" class="mail">
+<input type="submit" value="Submit" onclick="validateform()">       <!--onclick attribute was missing, so the script wasn't able to know when to start executing the function-->
 </td>
 </tr>
 <tr>
@@ -57,8 +57,8 @@ Email:
 Message:
 </td>
 <td> 
-<input type="text" Message="query" required>
-<input type="submit" value="Submit">
+<input type="text"  class="msg">
+<input type="submit" value="Submit" onclick="validateform()">       <!--onclick attribute was missing, so the script wasn't able to know when to start executing the function-->
 </td>
 </tr>
 </table>
@@ -67,41 +67,42 @@ Message:
      Submit
 </button>
 
+
 <script>
 
-function validateform(){  
+function validateform(){  
 
-var FullName=document.CustomerInformation.name.value;  
+// var FullName=document.CustomerInformation.name.value;            Not able to access the element <input>
+var FullName = document.querySelector(".name");
+// var Email=document.CustomerInformation.email.value;              Not able to access the element <input>
+var Email = document.querySelector(".mail");
+// var Message=document.CustomerInformation.message.value;          No need for this, as it's not taking part in form validation, but still, same reason as that of the above two.
+var Message = document.querySelector(".msg");
+if ((FullName.value)===""){  
 
-var Email=document.CustomerInformation.email.value;  
-
-var Message=document.CustomerInformation.message.value;
-  
-
-if (FullNameame==null || FullName==""){  
-
-  alert("Name can't be blank");  
-
-  return false;  
+  alert("Name can't be blank");  
+//the next statement-return false can also be skipped, as the code can work perfectly without it.
+  return false;  
 
 }
-else if(Email==null || Email=="" ){  
+else if((Email.value)==="" ){  
 
-  alert("Email must contain @ symbol and domain name Example: xyz@gmail.com");  
+  alert("Email must contain @ symbol and domain name Example: xyz@gmail.com");  
+//the next statement-return false can also be skipped, as the code can work perfectly without it.
+  return false;  
 
-  return false;  
-
-  }  
+  }  
 
 }
 </script>
+<!-- A small tip: you could've used multiple functions in a single script tag only -->
+<!-- better alternative: use external script and link it to the HTML file. It'll keep your HTML code clean.  -->
 <script>
   var btn = document.getElementById("btn1");
   btn.onclick = function (showAlert){
 alert("You have sucessfully submitted your query. We will get back to you soon");
   }
 </Script>
-<h1> <Font Color= "RED"> THANK YOU FOR VISITING! </font> </h1.
+<h1> <Font Color= "RED"> THANK YOU FOR VISITING! </font> </h1>
 </body>
 </html>
-
